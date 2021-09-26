@@ -1,0 +1,22 @@
+{
+  "name": "robot-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allen0lee/robot-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allen0lee/robot-challenge/issues"
+  },
+  "homepage": "https://github.com/allen0lee/robot-challenge#readme",
+  "dependencies": {
+    "jest": "^27.2.2"
+  }
+}
