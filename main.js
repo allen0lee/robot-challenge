@@ -1,5 +1,5 @@
 const readline = require('readline')
-const Robot = require("./robot")
+const Robot = require("./robot.js")
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -8,29 +8,28 @@ const rl = readline.createInterface({
 })
 
 const main = () => {
-  let r = new Robot()
-  
+  let robot = new Robot()
+
   rl.prompt()
-  
   rl.on('line', (line) => {
-    let [command, coordinates] = line.trim().split(' ') // remove space in input and turn it into array
-    
-    switch(command) {
-      case 'PLACE':    
+    let [command, coordinates] = line.trim().split(' ') // turn input into array
+
+    switch (command) {
+      case 'PLACE':
         let [x, y, f] = coordinates.split(',')
-        r.place(x, y, f)
+        robot.place(x, y, f)
         break
       case 'MOVE':
-        r.move()
+        robot.move()
         break
       case 'LEFT':
-        r.left()
+        robot.left()
         break
       case 'RIGHT':
-        r.right()
+        robot.right()
         break
       case 'REPORT':
-        let currentLocation = r.report()
+        let currentLocation = robot.report()
         console.log(`Output: ${currentLocation}`)
         break
       default:
@@ -41,7 +40,7 @@ const main = () => {
     console.log('\nGame quit, goodbye!')
     process.exit(0)
   })
-
+  
 }
 
 main()
